@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Hide & Seek</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bt.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+
+<header>
+
+  <nav class="navbar navbar-expand-sm justify-content-center">
+    <ul class="navbar-nav">
+      <a class="navbar-brand" href="#">Hide & Seek</a>
+      <li>
+        <a class="nav-link" href="/steganography/on"><i class="fas fa-lock"></i>Encryption</a>
+      </li>
+      <li>
+        <a class="nav-link" href="/steganography/off"><i class="fas fa-lock-open"></i>Decryption</a>
+      </li>
+      <li>
+        <a class="nav-link" href="/steganography/analysis"><i class="fas fa-chart-pie"></i>Analysis</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
+
+
+<main>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="col-item">
+          Hide & Seek
+        </div>
+        <div class="col-item">
+          Description
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+        <div class="col-item">
+          Hello world
+        </div>
+        <div class="col-item">
+          Lorem
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="col-item">
+          Hello world
+        </div>
+        <div class="col-item">
+          Lorem
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+
+<footer>
+
+  <b>Hide & Seek</b> 2020 - For education purposes
+
+</footer>
+
+</body>
+</html>

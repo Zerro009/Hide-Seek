@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Helium</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bt.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+
+<header>
+
+  <nav class="navbar navbar-expand-sm justify-content-center">
+    <ul class="navbar-nav">
+      <a class="navbar-brand" href="#">Govno Store</a>
+      <li class="nav-item drpdwn">
+        <a class="nav-link nav-drpdwn" href="#">Каталог<i class="fas fa-bars"></i></a>
+      </li>
+      <li>
+        <form class="form-inline" action="">
+          <input class="form-control nav-search" type="text" placeholder="Найти Apple Macbook">
+          <button class="btn nav-btn-search" type="submit">Найти</button>
+        </form>
+      </li>
+      <li>
+        <a class="nav-link" href="#"><i class="fas fa-clock"></i>Статус заказа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#"><i class="fas fa-chart-pie"></i>Сравнение</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#"><i class="fas fa-heart"></i>Избранное</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#"><i class="fab fa-bitbucket"></i>Корзина</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#"><i class="fas fa-user"></i>Вход</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+  <div class="wrapper">
+    <div class="content">
+    
+    <nav class="navbar navbar-expand-sm bg-dark justify-content-center">
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'img/helium.png' %}" alt="logo" style="width:40px;">
+      </a>
+      <!-- Nav tabs -->
+      <ul class="nav nav-pills" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/steganography/on">Encrypting</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/steganography/off">Decrypting</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/steganography/analysis">Analysis</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h2>Project Helium</h2>
+      <div class="row">
+        <div class="col-sm-2">
+          <img class="img-fluid" src="{% static 'img/helium.png' %}" alt="Project Logo" style="height: 150px"/>
+        </div>
+        <div class="col">
+          Project Helium is a team that was created for mind-developing.</div>
+      </div>
+      </div>
+      <div class="container">
+      <h2 style="margin-top: 50px;">Creative minds behind the project</h2>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width:200px; border: 2px solid #333333; margin-bottom: 10px;">
+            <img class="card-img-top" src="{% static 'img/galitsky.png' %}" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Gleb </br>Galitsky</h4>
+              <p class="card-text">Front-end developer
+                Designer
+              </p>
+              <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo1">Read more</button>
+              <div id="demo1" class="collapse" style="margin-top: 7px;">
+                Designed & created an interface of website, prepared to work with back-end.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width:200px; border: 2px solid #333333;">
+            <img class="card-img-top" src="{% static 'img/medvedenko.png' %}" alt="Card image" style="width: 100%;">
+            <div class="card-body">
+              <h4 class="card-title">Michael Medvedenko</h4>
+              <p class="card-text">Back-end Developer
+                Developer
+              </p>
+              <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo2">Read more</button>
+              <div id="demo2" class="collapse" style="margin-top: 7px;">
+                Made functionality of website & function of steganography encrypt/decrypt.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+      <div class="footer">
+        <nav class="navbar navbar-expand-sm bg-dark justify-content-center" style="color: #FFFFFF; position: static;">
+          <div class="footer-copyright text-center py-3">
+            Учебный вариант - 2020 Project Helium
+          </div>
+        </nav>
+      </div>
+    </div>
+
+</body>
+</html>

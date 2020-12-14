@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Hide & Seek</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bt.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    var loadFile = function(event) {
+      var image = document.getElementById('output');
+      image.src = URL.createObjectURL(event.target.files[0]);
+    };
+    </script>
+
+</head>
+
+<body>
+
+<header>
+
+  <nav class="navbar navbar-expand-sm justify-content-center">
+    <ul class="navbar-nav">
+      <a class="navbar-brand" href="/">Hide & Seek</a>
+      <li>
+        <a class="nav-link" href="/steganography/on"><i class="fas fa-lock"></i>Encryption</a>
+      </li>
+      <li>
+        <a class="nav-link" href="/steganography/off"><i class="fas fa-lock-open"></i>Decryption</a>
+      </li>
+      <li>
+        <a class="nav-link active" href="#"><i class="fas fa-chart-pie"></i>Analysis</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
+
+
+<main>
+
+  <div class="container">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="row m-0">
+        <div class="col col-encrypt-upper">
+          <div class="col-item">
+            Upload an image to encrypt:
+          </div>
+          <div class="col-item">
+            {{ file_form.as_p }}
+            <div class="custom-file">
+              <img id="output" class="img-fluid preview-image" src="{% static 'img/placeholder.png' %}"/>
+            </div>
+            <input type="submit" value="Analyse" class="btn">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="col-item">
+            LSB-noise image
+          </div>
+          <div class="col-item">
+            {% if request.method == 'POST' and extension == 'jpg' %}
+              <img id="output" class="img-fluid preview-image" src="{% static 'img/show_noise.jpg' %}"/>
+            {% elif request.method == 'POST' and extension == 'png' %}
+              <img id="output" class="img-fluid preview-image" src="{% static 'img/show_noise.png' %}"/>
+            {% elif request.method == 'POST' and extension == 'bmp' %}
+              <img id="output" class="img-fluid preview-image" src="{% static 'img/show_noise.bmp' %}"/>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-item">
+            LSB Analysis
+          </div>
+          <div class="col-item">
+            <b> Visual attack </b>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+
+  </div>
+
+</main>
+
+
+
+<footer>
+
+  <b>Hide & Seek</b> 2020 - For education purposes
+
+</footer>
+
+</body>
+</html>
