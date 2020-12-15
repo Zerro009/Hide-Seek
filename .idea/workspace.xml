@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3b2df756-54e3-40fa-ae1f-6fa132b0bbc4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_files/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/output_files/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_files/newimage.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_files/newimage.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/output_files/newimage.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_files/newimage.png" beforeDir="false" afterPath="$PROJECT_DIR$/output_files/newimage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_files/show_noise.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/show_noise.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/show_noise.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/show_noise.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/show_noise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steganography/cryptography.py" beforeDir="false" afterPath="$PROJECT_DIR$/steganography/cryptography.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steganography/imghandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/steganography/imghandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/steganography/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/steganography/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/steganography/stega0.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/steganography/stega0.html" afterDir="false" />
     </list>

@@ -44,7 +44,6 @@ def steganography_on(request):
                                                                          'distribution_form': distribution_form,
                                                                          'private_rsa_key': private_rsa_key,
                                                                          'public_rsa_key': public_rsa_key,
-                                                                         'cipher': cipher,
                                                                          'cipher_length': cipher_length,
                                                                          'letter_capacity': letter_capacity,
                                                                          'distribution': distribution,
