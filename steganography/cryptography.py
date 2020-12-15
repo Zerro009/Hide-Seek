@@ -119,18 +119,18 @@ class RSA:
         length = len(cipher)
 
         buffer = ""
-        for i in range(len(cipher)):
+        for i in range(length):
             buffer += cipher[i]
 
         if length % 3 == 0:
             cipher = str_to_triple_int_arr(buffer)
-            return cipher, length, capacity
+            return cipher, len(cipher), capacity
         else:
             while len(buffer) % 3 != 0:
                 buffer += '0'
-            length = len(buffer)
+                length += 1
             cipher = str_to_triple_int_arr(buffer)
-            return cipher, length, capacity
+            return cipher, len(cipher), capacity
 
     def decrypt(self, cipher, capacity):
         plain_text = []

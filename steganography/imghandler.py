@@ -130,7 +130,7 @@ class ImgHandler:
 
         counter = 0
         i = 0
-        while counter != (length // 3):
+        while counter != (length):
             x_coor = int(self.__distribution[1][i], 16)
             y_coor = int(self.__distribution[0][i], 16)
             if [y_coor, x_coor] not in used_coordinates and y_coor < image.size[0] and x_coor < image.size[1]:
