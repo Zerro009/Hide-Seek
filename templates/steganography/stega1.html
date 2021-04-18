@@ -69,28 +69,37 @@
           </div>
           <div class="col-item">
             <input type="submit" value="Decrypt" class="btn">
-            <textarea id="textarea" name="encrypt" disabled> {{ plain_text }} </textarea>
+            <textarea id="textarea" name="encrypt" disabled> {{ plaintext }} </textarea>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col col-encrypt-lower">
           <div class="col-item">
-            Input your public RSA key:
+            Input your AES key:
           </div>
           <div class="col-item">
-            {{ rsa_form.as_p }}
+            {{ key_form.as_p }}
           </div>
         </div>
-        <div class="col col-encrypt-lower">
+         <div class="col col-encrypt-lower">
           <div class="col-item">
-            Input distribution key, length, capacity:
+            Input distribution key:
           </div>
           <div class="col-item">
-            {{ distribution_key_form.as_p }}
+            {{ distribution_form.as_p }}
           </div>
         </div>
-      </div>
+	<div class="col col-encrypt-lower">
+          <div class="col-item">
+            Input ciphertext length:
+          </div>
+          <div class="col-item">
+            {{ cipherlength_form.as_p }}
+          </div>
+        </div>
+
+     </div>
     </form>
   </div>
 

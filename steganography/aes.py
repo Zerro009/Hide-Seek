@@ -210,6 +210,11 @@ class AES:
                 ^ self.__mulBy2(self.__mulBy2(num)) ^ self.__mulBy2(num)
 
     def encrypt(self, plaintext):
+        plaintext = [ord(i) for i in plaintext]
+
+        while len(plaintext) < 16:
+            plaintext.append(0x01)
+
         state = [[] for j in range(4)]
         for r in range(4):
             for c in range(nb):
@@ -234,10 +239,20 @@ class AES:
             for c in range(nb):
                 output[r + 4 * c] = state[r][c]
 
-        return output
+        result = ""
+        for i in range(len(output)):
+            tmp = bin(output[i])[2:]
+            tmp = tmp[::-1]
+            while len(tmp) != 8:
+                tmp += '0'
+            result += tmp[::-1]
+
+        return result, len(result)
 
 
     def decrypt(self, ciphertext):
+        ciphertext = [int(ciphertext[i : i + 8], 2) for i in range(len(ciphertext) // 8)]
+
         state = [[] for i in range(nb)]
         for r in range(4):
             for c in range(nb):

@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw
 import whirlpool
 
+from .aes import *
 from .cryptography import *
 
 '''
@@ -130,7 +131,7 @@ class ImgHandler:
 
         counter = 0
         i = 0
-        while counter != (length):
+        while counter != int(length):
             x_coor = int(self.__distribution[1][i], 16)
             y_coor = int(self.__distribution[0][i], 16)
             if [y_coor, x_coor] not in used_coordinates and y_coor < image.size[0] and x_coor < image.size[1]:
@@ -143,7 +144,12 @@ class ImgHandler:
             else:
                 used_coordinates.append([y_coor, x_coor])
             i += 1
-        return cipher
+
+        result = ""
+        for i in range(len(cipher)):
+            result += str(cipher[i][0]) + str(cipher[i][1]) + str(cipher[i][2])
+
+        return result
 
     def make_noise_picture(self):
         #  Here basic image manipulations from PIL module start

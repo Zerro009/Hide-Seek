@@ -76,7 +76,7 @@
       <div class="row">
         <div class="col col-encrypt-lower">
           <div class="col-item">
-            Custom private RSA key:
+            Custom AES key (keep in secret!):
           </div>
           <div class="col-item">
             {{ key_form.as_p }}
@@ -84,14 +84,19 @@
         </div>
         <div class="col col-encrypt-lower">
           <div class="col-item">
-            Keys data:
+            Distribution key:
           </div>
           <div class="col-item">
-            <textarea id="textarea" name="encrypt" value="RSA private key: {{ private_rsa_key }}" disabled>RSA private key: {{ private_rsa_key }}
-RSA public key: {{ public_rsa_key }}
-            </textarea>
+	    {{ distribution_form.as_p  }}
           </div>
         </div>
+      </div>
+      <div class="row">
+	<div class="col col-encrypt-lower">
+		<div class="col-item">
+			<textarea> Length: {{ cipherlength  }} </textarea>
+		</div>
+	</div>
       </div>
       </div>
       </div>
